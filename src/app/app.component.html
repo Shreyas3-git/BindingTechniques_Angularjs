@@ -4,10 +4,13 @@
     </head>
     <body>
         <div class="title">
-              <span>Hello World from {{this.title}}</span><br/><br/>
+              <span>Hello {{this.userName}} from {{this.title}}</span><br/><br/>
         </div>
        <div class="image"> 
             <img [src] = imgUrl alt="This is a image i added" (click)=onClick($event)/>
+        </div>
+        <div class="user">
+            <input [(ngModel)] = 'userName'/> <br/><br/>
         </div>
     </body>
 </html>

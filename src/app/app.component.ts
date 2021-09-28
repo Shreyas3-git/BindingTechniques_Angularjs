@@ -9,10 +9,18 @@ export class AppComponent
 {
   title = 'Hello-World';  
   imgUrl = '';
+  Url = 'http://www.bridgelabz.com';
   
   ngOnInit() : void 
   {
     this.title = 'BridgeLabz';
     this.imgUrl = '../assets/one.jpg';
   }
+
+  onClick($event)
+  {
+    console.log('save button is clicked',$event);
+    window.open(this.Url,'_blank');
+  }
+  
 }

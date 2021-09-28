@@ -7,7 +7,7 @@
               <span>Hello World from {{this.title}}</span><br/><br/>
         </div>
        <div class="image"> 
-            <img [src] = imgUrl alt="This is a image i added"/>
+            <img [src] = imgUrl alt="This is a image i added" (click)=onClick($event)/>
         </div>
     </body>
 </html>

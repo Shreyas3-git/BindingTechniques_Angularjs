@@ -11,6 +11,7 @@ export class AppComponent
   imgUrl = '';
   Url = 'http://www.bridgelabz.com';
   userName : string = "";
+  errorMessage : string = "";
 
   ngOnInit() : void 
   {
@@ -23,5 +24,20 @@ export class AppComponent
     console.log('save button is clicked',$event);
     window.open(this.Url,'_blank');
   }
-  
+
+  onInput($event)
+  {
+    console.log('Change event occured',$event);
+    const userRegex = RegExp('^[A-Z]{1}[a-zA-Z]{2,}$');
+    if (userRegex.test(this.userName))
+    {
+      this.errorMessage = '';
+      return ;  
+    }
+    else
+    {
+        this.errorMessage = 'Name is incorrect pattern not match';
+      
+    }
+  }
 }

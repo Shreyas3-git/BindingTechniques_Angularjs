@@ -5,7 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'BridgeLabz';  
+export class AppComponent 
+{
+  title = 'Hello-World';  
+  imgUrl = '';
   
+  ngOnInit() : void 
+  {
+    this.title = 'BridgeLabz';
+    this.imgUrl = '../assets/one.jpg';
+  }
 }

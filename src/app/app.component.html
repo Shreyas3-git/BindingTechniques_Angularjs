@@ -3,8 +3,13 @@
         <title></title>
     </head>
     <body>
-      <span>Hello World from {{this.title}}</span>
-    
-     
+        <div class="title">
+              <span>Hello World from {{this.title}}</span><br/><br/>
+        </div>
+       <div class="image"> 
+            <img [src] = imgUrl alt="This is a image i added"/>
+        </div>
     </body>
 </html>
+
+<router-outlet></router-outlet>
